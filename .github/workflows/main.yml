@@ -1,7 +1,8 @@
 
 name: deploy on github page
 run-name: ${{ github.actor }} is deploying on github page
-on: push:
+on:
+  push:
     branches:
       - master
 jobs:
