@@ -10,6 +10,11 @@ html {
   *::after {
     box-sizing: border-box;
   }
+  body {
+    color: var(--prj-color-text);
+    background-color: var(--prj-color-bg);
+    @extend %font-base !optional;
+  }
 }
 
 figure,

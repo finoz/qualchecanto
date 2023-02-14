@@ -1,0 +1,55 @@
+.song {
+	display: flex;
+	flex-direction: column;
+	&-title {
+		font-size: 1.6rem;
+		font-weight: 500;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		&::-webkit-details-marker {
+			display: none;
+		}
+	}
+	&:not([open]) {
+		.song-title:focus {
+			padding-left: 1rem;
+		}
+	}
+	&[open] {
+		position: fixed;
+		padding: 2rem;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		overflow: auto;
+		background: white;
+		z-index: 2;
+		.song-title {
+			&::after {
+				content: '✕';
+			}
+		}
+	}
+	&-author {
+		padding-top: 1.6rem;
+		font-size: 1rem;
+		font-weight: 300;
+	}
+	&-text {
+		padding-top: 1rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		font-weight: 300;
+		white-space: break-spaces;
+
+	}
+	& + .song:not([open]) {
+		margin-top: 0.8rem;
+		padding-top: 0.8rem;
+		border-top: 1px solid var(--gray-gainsboro);
+	}
+}

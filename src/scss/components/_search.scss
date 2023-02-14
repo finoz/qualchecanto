@@ -1,0 +1,24 @@
+.searchtoolbar {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	gap: 0.8rem;
+	align-items: center;
+	justify-content: space-between;
+	&-input {
+		flex: 1;
+		border: 0 none;
+		border-bottom: 1px solid var(--greenish);
+		border-radius: 0;
+		background-color: transparent;
+		padding: 0.4rem 0;
+		font-size: 1.2rem;
+	}
+	&-reset {
+		color: inherit;
+		border: 0 none;
+		background: none;
+		outline: 0 none;
+		padding: 0;
+	}
+}

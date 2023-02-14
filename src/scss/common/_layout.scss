@@ -1,0 +1,204 @@
+@use '../helpers' as *;
+
+.page {
+
+	@include container($bp-desktop-xl, flex);
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 6rem;
+	&-content {
+		padding: 4vh 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.section-decoration {
+			max-width: 12rem;
+			margin: 0 auto;
+			padding: 2rem 1.5rem 1rem 1.5rem;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&--intro {
+			.content-title {
+				display: block;
+				font-weight: 400;
+				font-size: 3.6rem;
+				margin-bottom: 1rem;
+			}
+			.content-note {
+				font-size: 2rem;
+			}
+		}
+		&--quote {
+			.content-quote {
+				max-width: 20rem;
+				margin: 0 auto;
+				padding: 4rem 1.5rem 2rem 1.5rem;
+				&-cit {
+					position: relative;
+					font-size: 3rem;
+					font-style: italic;
+					margin: 0;
+					z-index: 1;
+					&::before,
+					&::after {
+						font-family: 'georgia', serif;
+						font-size: 16rem;
+						font-style: normal;
+						color: var(--gray-gainsboro);
+						position: absolute;
+						z-index: -1;
+						left: 50%;
+						margin-left: -3.2rem;
+					}
+					&::before {
+						top: -30%;
+						content: "“";
+					}
+					&::after {
+						top: 75%;
+						content: "”";
+					}
+				}
+				&-ref {
+					position: relative;
+					z-index: 2;
+					display: block;
+					margin-top: 3rem;
+					font-style: normal;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		&--messa {
+			.content-subtitle {
+				margin-bottom: 1.5rem;
+			}
+			.content-note {
+				margin-top: 0.5rem;
+			}
+		}
+		&--festa {
+			.content-title {
+				margin-top: 0.5rem;
+				margin-bottom: 1.5rem;
+			}
+		}
+		&--dona {
+			.content-title {
+				margin-bottom: 1.5rem;
+			}
+			.content-cta {
+				margin-top: 4rem;
+			}
+		}
+		&--grazie {
+			position: relative;
+			margin: 0 auto;
+			padding-top: 0;
+			[class*="swiper-button"] {
+				display: none;
+			}
+			@include breakpoint('tablet-portrait') {
+				[class*="swiper-button"] {
+					display: block;
+				}
+			}
+			.content-gallery-caption {
+				position: absolute;
+				z-index: 2;
+				top: -7vw;
+				right: 1rem;
+				font-size: 16vw;
+				font-weight: 400;
+				line-height: 0.5;
+				font-style: normal;
+				color: var(--gray-gainsboro);
+				filter: invert(0.9);
+				text-align: right;
+				> span {
+					font-size: 50%;
+				}
+				@include breakpoint('tablet-portrait') {
+					font-size: 3rem;
+					top: -1.2rem;
+					right: -0.5rem;
+				}
+			}
+		}
+	}
+}
+
+.content {
+	&-title {
+		font-size: 2.4rem;
+		font-weight: 400;
+	}
+	&-subtitle {
+		font-size: 2.4rem;
+		font-weight: 300;
+	}
+	&-note {
+		font-size: 1.6rem;
+	}
+	&-decoration {
+		max-width: 16rem;
+		margin: 0 auto;
+		padding: 5vh 1.5rem;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&-cta {
+		margin: 1rem auto 1rem auto;
+		font-size: 1.4rem;
+		font-weight: 400;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 0.8rem;
+		border: 1px solid currentColor;
+		&:hover,
+		&:focus {
+			background-color: var(--prj-color-text);
+			border-color: var(--prj-color-text);
+			color: var(--prj-color-bg);
+		}
+	}
+	&-gallery {
+		position: relative;
+		width: calc(100vw - 3rem);
+		max-width: 36rem;
+		z-index: 1;
+		img {
+			width: 100%;
+			border-radius: 3px;
+		}
+	}
+}
+
+/* CANTI */
+[data-page="canti"] {
+	.page {
+		text-align: left;
+		padding: 2rem;
+		max-width: 60rem;
+		&-content {
+			align-items: stretch;
+			padding: 1rem 0;
+		}
+	}
+	.content-decoration {
+		margin: 0;
+		padding: 0;
+		max-width: 5rem;
+	}
+}
