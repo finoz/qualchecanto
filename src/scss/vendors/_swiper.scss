@@ -1,0 +1,45 @@
+@use '~swiper/css/bundle';
+@use '../helpers' as *;
+
+:root {
+    --swiper-navigation-size: 2rem;
+}
+
+// arrows
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    color: var(--black);
+    &::after {
+    }
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: 1rem;
+    left: auto;
+    &::after {
+        //
+    }
+}
+.swiper-button-prev, 
+.swiper-rtl .swiper-button-next {
+    left: 1rem;
+    right: auto;
+    &::after {
+    }
+}
+
+// pagination
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  .swiper-pagination-bullet {
+    &-active {
+        background-color: var(--white-dirty);
+    }
+  }
+}

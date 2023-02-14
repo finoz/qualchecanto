@@ -1,0 +1,10 @@
+@use 'colors' as *;
+@use 'colors' as *;
+
+@mixin container($max-width, $display: block) {
+  position: relative;
+  display: $display;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $max-width;
+}

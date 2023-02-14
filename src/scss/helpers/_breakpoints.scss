@@ -1,0 +1,29 @@
+@mixin breakpoint($bp, $type: min) {
+  $width: map-get($bp-list, $bp);
+  @if $type == max {
+    $width: $width - 1px;
+  }
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+/**
+* mobile-first approach every step is from a breakpoint to a higher value
+*/
+$bp-mobile: 0;
+$bp-tablet-portrait: 768px;
+$bp-tablet-landscape: 1024px;
+$bp-desktop: 1280px;
+$bp-desktop-xl: 1440px;
+$bp-desktop-xxl: 1920px;
+
+/* useful for loops on media breakpoints */
+$bp-list: (
+  mobile: $bp-mobile,
+  tablet-portrait: $bp-tablet-portrait,
+  tablet-landscape: $bp-tablet-landscape,
+  desktop: $bp-desktop,
+  desktop-xl: $bp-desktop-xl,
+  desktop-xxl: $bp-desktop-xxl,
+);

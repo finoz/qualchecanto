@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Anna e Mitch | canti</title>
+	<meta name="description" content="11 febbraio 2023 - Canta che ti passa">
+
+	<link rel="stylesheet" href="./dist/main.css">
+	<link rel="preload" href="./assets/fonts/OpenSans_Condensed-Light.ttf" as="font" type="font/ttf" crossorigin="" />
+	<link rel="preload" href="./assets/fonts/OpenSans_Condensed-Regular.ttf" as="font" type="font/ttf" crossorigin="" />
+	<style>
+		@font-face {
+			font-family: 'Open Sans Condensed';
+			src: url('./assets/fonts/OpenSans_Condensed-Light.ttf') format('truetype');
+			font-weight: 300;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Open Sans Condensed';
+			src: url('./assets/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
+</head>
+<body data-page="canti">
+	<main class="page" id="main">
+		<figure class="content-decoration"><img src="./assets/images/foglie-04.png" alt=""></figure>
+		<section class="page-content page-content--intro">
+			<h1><span class="content-title">Canti</span></h1>
+			<form class="searchtoolbar" data-target=".song" data-targetref="title,author">
+				<input class="searchtoolbar-input" type="input" name="searchinput" id="searchinput" placeholder="Cerca">
+				<button class="searchtoolbar-reset" type="reset">✕</button>
+			</form>
+		</section>
+		<section class="page-content page-content--canti">
+			<p class="loading">loading...</p>
+		</section>
+	</main>
+</body>
+<script>
+	window.songbook = [
+		{
+			title: 'Per dimenticare',
+			author: 'Zero Assoluto',
+			id: 'per-dimenticare',
+		},
+		{
+			title: 'Funiculì, funiculà',
+			author: '',
+			id: 'funiculi',
+		},
+		{
+			id: 'graziemille',
+			title: 'Grazie mille',
+			author: 'Max pezzali',
+		},
+		{
+			id: 'cisonoanchio',
+			title: 'Ci sono anch´io',
+			author: 'Max Pezzali',
+		},
+		{
+			id: 'innamoraretanto',
+			title: 'Innamorare tanto',
+			author: '883',
+		},
+		{
+			id: 'seiononavessite',
+			title: 'Se io non avessi te',
+			author: 'Nek',
+		},
+		{
+			id: 'leggero',
+			title: 'Leggero',
+			author: 'Luciano Ligabue',
+		},
+		{
+			id: 'piccolastellasenzacielo',
+			title: 'Piccola stella senza cielo',
+			author: 'Luciano Ligabue',
+		},
+		{
+			id: 'scrivilescemo',
+			title: 'Scrivile scemo',
+			author: 'Pinguini tattici nucleari',
+		},
+		{
+			id: 'argento',
+			title: 'Argento',
+			author: 'Claudio Chieffo',
+		},
+		{
+			id: 'sullarottadicristoforocolombo',
+			title: 'Sulla rotta di Cristoforo Colombo',
+			author: 'Lucio Dalla',
+		},
+		{
+			id: 'lacasainrivaalmare',
+			title: 'La casa in riva al mare',
+			author: 'Lucio Dalla',
+		},
+		{
+			id: 'lacompagnia',
+			title: 'La compagnia',
+			author: 'Lucio Battisti',
+		},
+		{
+			id: 'fiorirosa',
+			title: 'Fiori rosa',
+			author: 'Lucio Battisti',
+		},
+		{
+			id: '7e40',
+			title: '7 e 40',
+			author: 'Lucio Battisti',
+		},
+		{
+			id: 'ungiornomigliore',
+			title: 'Un giorno migliore',
+			author: 'Lunapop',
+		},
+		{
+			id: '50special',
+			title: '50 special',
+			author: 'Lunapop',
+		},
+		{
+			id: 'piccolograndeamore',
+			title: 'Questo piccolo grande amore',
+			author: 'Claudio Baglioni',
+		},
+		{
+			id: 'unbacioamezzanotte',
+			title: 'Un bacio a mezzanotte',
+			author: 'Quartetto cetra',
+		},
+		{
+			id: 'malanotteno',
+			title: 'Ma la notte no',
+			author: 'Renzo Arbore',
+		},
+		{
+			id: 'latanadelre',
+			title: 'La tana del re',
+			author: 'Adriano Celentano',
+		},
+		{
+			id: 'unaragazzaindue',
+			title: 'Una ragazza in due',
+			author: 'I giganti',
+		},
+		{
+			id: 'pieroecinzia',
+			title: 'Piero e Cinzia',
+			author: 'Antonello Venditti',
+		},
+		{
+			id: 'hoinmentete',
+			title: 'Ho in mente te',
+			author: 'Equipe 84',
+		},
+		{
+			id: 'ceraunavoltaunre',
+			title: 'C´era una volta un re',
+			author: 'Daniele Donati',
+		},
+		{
+			id: 'lagrandecompagnia',
+			title: 'La grande compagnia',
+			author: '',
+		},
+		{
+			id: 'countryroads',
+			title: 'Country roads',
+			author: 'John Denver',
+		},
+		{
+			id: 'wildrover',
+			title: 'The wild rover',
+			author: '',
+		},
+		{
+			id: 'pasacalles',
+			title: 'Pasacalles',
+			author: '',
+		},
+		{
+			id: 'santantonio',
+			title: 'Sant´Antonio allu desertu',
+			author: 'I gufi',
+		},
+		{
+			id: 'serranamia',
+			title: 'Serrana mia',
+			author: '',
+		},
+		{
+			id: 'osurdato',
+			title: 'O surdato ´nnammurato',
+			author: '',
+		},
+		{
+			id: 'madonnadelagrazia',
+			title: 'Madonna de la grazia',
+			author: '',
+		},
+		{
+			id: 'tantopecanta',
+			title: 'Tanto pe´cantà',
+			author: '',
+		},
+		{
+			id: 'romanunfalastupida',
+			title: 'Roma nun fa´la stupida',
+			author: '',
+		},
+		{
+			id: 'lasocietadeimagnaccioni',
+			title: 'La società dei magnaccioni',
+			author: '',
+		},
+		{
+			id: 'iovagabondo',
+			title: 'Io vagabondo',
+			author: 'I nomadi',
+		},
+		{
+			id: 'latuacanzone',
+			title: 'La tua canzone',
+			author: 'Coez',
+		},
+		{
+			id: 'pugnichiusi',
+			title: 'Pugni chiusi',
+			author: 'I ribelli',
+		},
+		{
+			id: 'rimmel',
+			title: 'Rimmel',
+			author: 'Francesco De Gregori',
+		}
+
+	]
+</script>
+<script src='./dist/main.js' async></script>
+</html>

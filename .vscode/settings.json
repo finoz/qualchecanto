@@ -1,0 +1,62 @@
+{
+    // JS FORMATTER
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+    },
+    // HTML FORMATTER
+    "[xml]": {
+      "editor.defaultFormatter": "redhat.vscode-xml",
+      "editor.tabSize" :4
+    },
+    "[json]": {
+      "editor.formatOnSave": true
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    // HTML FORMATTER
+    "html.format.wrapLineLength": 500,
+    "html.format.wrapAttributes": "preserve",
+    // CSS FORMATTER
+    "css.lint.duplicateProperties": "error",
+    "css.lint.emptyRules": "error",
+    "css.lint.float": "error",
+    "css.lint.important": "warning",
+    "css.lint.zeroUnits": "error",
+    "scss.lint.emptyRules": "error",
+    "scss.lint.universalSelector": "warning",
+    "scss.lint.unknownAtRules": "ignore",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#479F7A",
+      "titleBar.activeBackground": "#6601017a",
+      "titleBar.activeForeground": "#FFFFFF",
+      "activityBar.activeBackground": "#479F7A",
+      "activityBar.activeBorder": "#000000",
+      "activityBar.foreground": "#FFFFFF",
+      "activityBar.inactiveForeground": "#FFFFFF99",
+      "activityBarBadge.background": "#000000",
+      "activityBarBadge.foreground": "#FFFFFF",
+      "statusBar.background": "#6601017a",
+      "statusBar.foreground": "#FFFFFF",
+      "statusBarItem.hoverBackground": "#479F7A",
+      "titleBar.inactiveBackground": "#66010199",
+      "titleBar.inactiveForeground": "#FFFFFF99",
+      "sash.hoverBorder": "#479F7A",
+      "statusBarItem.remoteBackground": "#6601017a",
+      "statusBarItem.remoteForeground": "#FFFFFF"
+    },
+    // EDITOR
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": true,
+    "editor.snippetSuggestions": "bottom",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 240,
+    "diffEditor.wordWrap": "on",
+  	"html.suggest.html5": true,
+    "editor.bracketPairColorization.enabled": true,
+    
+}
