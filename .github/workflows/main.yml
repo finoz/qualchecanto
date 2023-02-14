@@ -13,9 +13,3 @@ jobs:
     steps:
       - name: init
       - run: npm install
-
-      - name: build
-      - run: npm run build
-      
-      - name: deploy
-      - run: gh-pages -d build
