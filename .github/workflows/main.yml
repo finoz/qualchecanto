@@ -1,15 +1,23 @@
-
 name: deploy on github page
 run-name: ${{ github.actor }} is deploying on github page
+
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
+
 jobs:
-  build-and-deploy:
-    name: build and deploy
+  build:
     runs-on: ubuntu-latest
-    environment: production
+
     steps:
-      - name: init
-      - run: npm install
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js v16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+
+    - name: Build
+      run: |
+        npm install
+        npm run build
