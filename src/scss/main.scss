@@ -6,8 +6,8 @@
 @use './common' as *;
 
 body {
-	color: var(--blue);
-	background-color: var(--white-dirty);
+	color: var(--prj-color-text);
+	background-color: var(--prj-color-bg);
 	@extend %font-base !optional;
 }
 .page {
@@ -177,9 +177,9 @@ body {
 		border: 1px solid currentColor;
 		&:hover,
 		&:focus {
-			background-color: var(--blue);
-			border-color: var(--blue);
-			color: var(--white-dirty);
+			background-color: var(--prj-color-text);
+			border-color: var(--prj-color-text);
+			color: var(--prj-color-bg);
 		}
 	}
 	&-gallery {
