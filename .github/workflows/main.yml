@@ -1,0 +1,14 @@
+
+name: deploy on github page
+run-name: ${{ github.actor }} is deploying on github page
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run build
